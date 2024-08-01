@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect , useState } from "react";
 
 function Stopwatch()
@@ -17,14 +18,15 @@ function Stopwatch()
         {
             interval = setInterval(()=>{
                 setTimer((prevTimer)=>prevTimer+1);
-            },100);
+            },1000);
         }
         return (()=>{clearInterval(interval);
     })
-        },[isRunning]);
+        },[isRunning, timer]);
 
     return (
         <>
+        <div>
         <h1>StopWatch</h1>
         <h2>Timer: {formatTime(timer)}</h2>
         <button onClick={()=>{
@@ -34,6 +36,7 @@ function Stopwatch()
             setTimer(0);
             setIsRunning(false);
         }}> Reset</button>
+        </div>
         </>
     );
 }
