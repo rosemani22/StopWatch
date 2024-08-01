@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect , useState } from "react";
 
-function Stopwatch()
+function Watch()
 {
     const [ timer,setTimer] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
@@ -25,20 +25,20 @@ function Stopwatch()
         },[isRunning, timer]);
 
     return (
-        <>
+        
         <div>
         <h1>StopWatch</h1>
         <h2>Timer: {formatTime(timer)}</h2>
         <button onClick={()=>{
             setIsRunning((prev)=> !prev);
-        }}>{isRunning? "Stop":"Start"}</button>
+        }}>{isRunning ? "Stop":"Start"}</button>
         <button onClick={()=>{
             setTimer(0);
             setIsRunning(false);
         }}> Reset</button>
         </div>
-        </>
+        
     );
 }
 
-export default Stopwatch;
+export default Watch;

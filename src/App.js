@@ -1,10 +1,10 @@
 
-import Stopwatch from "./Stopwatch";
+import Watch from "./Stopwatch";
 
 function App() {
    return (
    <div>
-    <Stopwatch />
+    <Watch />
      </div>
 
    );
