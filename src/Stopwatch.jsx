@@ -27,7 +27,7 @@ function Watch()
     return (
         
         <div>
-        <h1>StopWatch</h1>
+        <h1>Stopwatch</h1>
         <h2>Timer: {formatTime(timer)}</h2>
         <button onClick={()=>{
             setIsRunning((prev)=> !prev);
